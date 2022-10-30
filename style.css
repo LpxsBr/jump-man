@@ -1,3 +1,107 @@
-*{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0% auto;
+    box-sizing: border-box;
+    padding: 1%;
+}
+
+.space {
+    background-image: linear-gradient(rgb(68, 143, 255), rgb(255, 255, 255));
+    height: 90vh;
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+}
+
+.man {
+    position: absolute;
+    width: 500px;
+    bottom: -100px;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.monster {
+    position: absolute;
+    width: 250px;
+    bottom: 45px;
+    animation: run linear 5s infinite
+}
+
+
+.floor {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    height: 150px;
+    background: green;
+    margin: 0px;
+    bottom: 0px;
+}
+@media (max-width: 780px) {
+    .man{
+        left: -100px;
+        width: 300px;
+        bottom: -100px;
+    }   
+    .monster{
+        width: 150px;
+        bottom: -15px;
+    }
+
+    .floor{
+        height: 50px;
+    }
+}
+
+#count {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+.cloud {
+    width: 1000px;
+    position: absolute;
+    animation: cloud linear 25s infinite;
+}
+
+@keyframes run {
+    from {
+        left: calc(80% + 200px);
+    }
+
+    to {
+        left: -200px;
+    }
+}
+
+@keyframes cloud {
+    from {
+        left: calc(80% + 200px);
+    }
+
+    to {
+        left: -1000px;
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(-0px)
+    }
+
+    30%,
+    40%,
+    50%,
+    60%,
+    70% {
+        transform: translateY(-200px)
+    }
+
+    0% {
+        transform: translateY(-0px)
+    }
 }
